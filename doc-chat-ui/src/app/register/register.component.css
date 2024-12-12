@@ -1,0 +1,80 @@
+/* Container for the entire form */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #feb47b, #ff7e5f); /* Adjust gradient to start with a lighter tone */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Card Style for the Register Form */
+.register-card {
+  width: 400px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+/* Header Styling */
+.register-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #304ffe; /* Adjusted shade to a brighter blue to match gradient warmth */
+}
+
+.register-header p {
+  margin: 5px 0 0;
+  color: #777; /* Light gray for subheader */
+}
+
+/* Full width for input fields */
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  background-color: #607d8b; /* Muted blue-gray */
+  color: white; /* White text color for the button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5c6bc0; /* Lighter blue on hover */
+}
+
+/* Footer Styling */
+.register-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Footer Text Styling */
+.register-footer p {
+  font-size: 14px;
+  color: #333; /* Dark gray for footer text for readability */
+}
+
+/* Footer Link Styling */
+.register-footer a {
+  color: #304ffe; /* Softer blue-gray for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}

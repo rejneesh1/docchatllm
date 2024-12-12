@@ -1,0 +1,35 @@
+<div class="chat-window">
+  <!-- Chat History Section -->
+  <div class="chat-history" #scrollContainer>
+    <div *ngFor="let message of chatHistory" class="message"
+      [ngClass]="{'user-message': message.sender === 'You:', 'llm-message': message.sender === 'LLM:'}">
+      <div class="message-bubble">
+        <div class="message-header">
+          <span class="message-sender">{{ message.sender }}</span>
+        </div>
+        <div class="message-content">{{ message.message }}</div>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div *ngIf="isLoading" class="typing-indicator">
+      <mat-spinner diameter="24" [strokeWidth]="4"></mat-spinner>
+      <span>LLM is typing...</span>
+    </div>
+  </div>
+
+  <!-- Message Input Section -->
+
+  <div class="message-input-container" [formGroup]="chatForm">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Input</mat-label>
+      <input matInput formControlName="message" placeholder="Enter message" [disabled]="isLoading"
+        (keydown.enter)="onSendMessage()">
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="send-button" (click)="onSendMessage()"
+      [disabled]="chatForm.invalid || isLoading">
+      Send
+    </button>
+  </div>
+</div>

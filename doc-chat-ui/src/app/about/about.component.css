@@ -1,0 +1,161 @@
+/* Ensures that the body and html elements fill the full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: 'Roboto', sans-serif; /* Matching the font family */
+}
+
+/* Container for the About page */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  background: linear-gradient(to right, #feb47b, #ff7e5f); /* Matching gradient theme */
+  min-height: 100vh; /* Ensures the container takes full height of the viewport */
+  box-sizing: border-box;
+}
+
+/* Hero section with a similar style to the landing page */
+.hero-section {
+  text-align: center;
+  background-color: #304ffe; /* Brighter blue to match the landing page */
+  color: white;
+  padding: 60px 20px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 96%;
+  max-width: 800px;
+  min-height: 40vh; /* Ensures the hero section takes up a portion of the viewport height */
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-section .description {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* Info section styling */
+.info-section {
+  text-align: center;
+  padding: 40px;
+  width: 96%;
+  background-color: white; /* White background for contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #304ffe; /* Matching blue for the heading */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Team section */
+.team-section {
+  text-align: center;
+  padding: 40px;
+  width: 96%;
+  background-color: white; /* White background for contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #304ffe; /* Primary blue */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap; /* Allows wrapping if the screen width is too small */
+}
+
+.team-member {
+  text-align: center;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers the content */
+  align-items: center; /* Horizontally centers the content */
+  gap: 10px;
+  padding: 20px;
+  height: 250px; /* Set a fixed height to prevent clipping */
+  box-sizing: border-box;
+  background-color: white; /* White background for each team member */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 22%;
+}
+
+.team-member mat-icon {
+  font-size: 4rem; /* Icon size */
+  color: #304ffe; /* Matching blue for the icons */
+  display: block;
+  margin-bottom: 15px;
+  width: auto;
+  height: auto;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #304ffe; /* Primary blue for team member name */
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Call-to-action section */
+.cta-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cta-container a {
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border-radius: 25px;
+  background-color: #304ffe; /* Primary blue */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-container a:hover {
+  background-color: #1e40ff; /* Slightly lighter blue on hover */
+}

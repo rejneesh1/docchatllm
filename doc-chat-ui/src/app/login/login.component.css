@@ -1,0 +1,74 @@
+/* Login container with matching gradient */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #feb47b, #ff7e5f); /* Matching the page gradient */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Login card with consistent design */
+.login-card {
+  width: 400px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: white; /* White background for the login form */
+}
+
+/* Header styling */
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #304ffe; /* Adjusted header color to match the blue theme */
+}
+
+.login-header p {
+  margin: 5px 0 0;
+  color: #777; /* Light gray for subheader */
+}
+
+/* Full width for input fields */
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  background-color: #304ffe; /* Blue button to match header */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e40ff; /* Slightly lighter blue on hover */
+}
+
+/* Footer styling */
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Footer link styling */
+.login-footer a {
+  color: #304ffe; /* Blue links for consistency */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}

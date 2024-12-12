@@ -1,0 +1,73 @@
+<div class="dashboard-container">
+  <mat-card>
+    <mat-card-title>Upload Files for LLM</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="fileUploadForm">
+        <!-- File Input Styled with mat-button -->
+        <div class="file-upload-container">
+          <button
+            mat-raised-button
+            color="primary"
+            class="file-upload-button"
+            (click)="fileInput.click()"
+            [disabled]="isUploading"
+          >
+            Choose File
+          </button>
+          <input
+            #fileInput
+            type="file"
+            (change)="onFileChange($event)"
+            formControlName="file"
+            hidden
+          />
+          <span *ngIf="fileToUpload" class="file-name">{{ fileToUpload.name }}</span> <!-- Display the file name here -->
+        </div>
+
+        <!-- Upload Button -->
+        <button
+          mat-raised-button
+          color="primary"
+          type="button"
+          (click)="uploadFile()"
+          [disabled]="fileUploadForm.invalid || isUploading || !fileToUpload"
+        >
+          Upload
+        </button>
+
+        <!-- Progress Bar -->
+        <mat-progress-bar
+          *ngIf="isUploading"
+          mode="determinate"
+          [value]="uploadProgress"
+        ></mat-progress-bar>
+      </form>
+
+      <!-- Uploaded Files Table -->
+      <div *ngIf="uploadedFiles.length > 0">
+        <h3 class="uploaded-files-title">Uploaded Files</h3> <!-- Added class for title -->
+        <table mat-table [dataSource]="uploadedFiles" class="file-table">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>File Name</th>
+            <td mat-cell *matCellDef="let file">{{ file.name }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="uploadDate">
+            <th mat-header-cell *matHeaderCellDef>Upload Date</th>
+            <td mat-cell *matCellDef="let file">{{ file.uploadDate }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let file; let i = index">
+              <button mat-raised-button color="warn" (click)="deleteFile(i)">Delete</button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="['name', 'uploadDate', 'delete']"></tr>
+          <tr mat-row *matRowDef="let row; columns: ['name', 'uploadDate', 'delete']"></tr>
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

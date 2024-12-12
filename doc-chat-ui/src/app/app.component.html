@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="app-toolbar">
+  <span class="app-title">
+    <mat-icon>description</mat-icon> <!-- Add your icon here -->
+    DocChat</span>
+  <span class="spacer"></span>
+  <nav *ngIf="isLoggedIn">
+    <button mat-button routerLink="/">Home</button>
+    <button 
+      mat-button 
+      routerLink="/dashboard" 
+      *ngIf="isAdminLoggedIn">Admin Dashboard</button>
+      <button mat-button routerLink="/chat">LLM Chat</button>
+    <button mat-button routerLink="/about">About</button>
+    <button mat-button (click)="logout()">Logout</button>
+  </nav>
+  <button *ngIf="!isLoggedIn" mat-button routerLink="/login">Login</button>
+</mat-toolbar>
+
+<main>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</main>

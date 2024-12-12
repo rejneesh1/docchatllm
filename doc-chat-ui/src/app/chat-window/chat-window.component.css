@@ -1,0 +1,92 @@
+/* General Chat Window */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(to right, #feb47b, #ff7e5f); /* Match the landing page gradient */
+}
+
+/* Chat History Section */
+.chat-history {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 8px; /* Rounded corners to match the container */
+}
+
+/* Message Bubbles */
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-bubble {
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+}
+
+.user-message .message-bubble {
+  align-self: flex-end;
+  background-color: #c5cae9; /* Light blue to match blue theme */
+  /* color: #304ffe; Dark blue text */
+}
+
+.llm-message .message-bubble {
+  align-self: flex-start;
+  background-color: #f1e0d6;
+  color: #05050e;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #304ffe; /* Use the blue theme color */
+}
+
+.typing-indicator mat-spinner {
+  margin-right: 8px;
+}
+
+/* Message Input Section */
+.message-input-container {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+ 
+}
+
+.send-button:hover {
+  background-color: #1e40ff; /* Lighter blue on hover */
+}
+
+/* Styling the mat-form-field (Outline) */
+mat-form-field {
+  width: 88%;
+  margin: 1% 2%;
+  
+}
+
+.mat-form-field-outline {
+    border-color: #304ffe; /* Blue border for outline */
+
+ 
+}
+
+.mat-form-field-label {
+  color: #304ffe; /* Blue label */
+}
+
