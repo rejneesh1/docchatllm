@@ -1,5 +1,7 @@
 # Angular UI with Backend Integration (Demo using Browser Storage)
 
+**[Live Demo](https://rejneesh1.github.io/docchatllm/dashboard)**
+
 This project is a simple Angular-based web application designed to demonstrate basic user interactions and administrative functionalities. It is prepared to integrate with a backend system in the future but currently uses browser storage for demonstration purposes.
 
 ## Features
